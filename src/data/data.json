@@ -1,0 +1,568 @@
+{
+    "recipe_data": [
+        {
+            "name": "iron ore",
+            "input_resources": [],
+            "quantity": 0,
+            "machine": "miner"
+        },
+        {
+            "name": "copper ore",
+            "input_resources": [],
+            "quantity": 0,
+            "machine": "miner"
+        },
+        {
+            "name": "limestone",
+            "input_resources": [],
+            "quantity": 0,
+            "machine": "miner"
+        },
+        {
+            "name": "raw quartz",
+            "input_resources": [],
+            "quantity": 0,
+            "machine": "miner"
+        },
+        {
+            "name": "caterium ore",
+            "input_resources": [],
+            "quantity": 0,
+            "machine": "miner"
+        },
+        {
+            "name": "sulfer",
+            "input_resources": [],
+            "quantity": 0,
+            "machine": "miner"
+        },
+        {
+            "name": "coal",
+            "input_resources": [],
+            "quantity": 0,
+            "machine": "miner"
+        },
+        {
+            "name": "crude oil",
+            "input_resources": [],
+            "quantity": 0,
+            "machine": "oil extractor"
+        },
+        {
+            "name": "iron ingot",
+            "input_resources": [
+                {
+                    "name": "iron ore",
+                    "quantity": 30
+                }
+            ],
+            "quantity": 30,
+            "machine": "smelter"
+        },
+        {
+            "name": "copper ingot",
+            "input_resources": [
+                {
+                    "name": "copper ore",
+                    "quantity": 30
+                }
+            ],
+            "quantity": 30,
+            "machine": "smelter"
+        },
+        {
+            "name": "caterium ingot",
+            "input_resources": [
+                {
+                    "name": "caterium ore",
+                    "quantity": 45
+                }
+            ],
+            "quantity": 15,
+            "machine": "smelter"
+        },
+        {
+            "name": "iron plate",
+            "input_resources": [
+                {
+                    "name": "iron ingot",
+                    "quantity": 30
+                }
+            ],
+            "quantity": 20,
+            "machine": "constructor"
+        },
+        {
+            "name": "iron rod",
+            "input_resources": [
+                {
+                    "name": "iron ingot",
+                    "quantity": 15
+                }
+            ],
+            "quantity": 15,
+            "machine": "constructor"
+        },
+        {
+            "name": "screw",
+            "input_resources": [
+                {
+                    "name": "iron rod",
+                    "quantity": 10
+                }
+            ],
+            "quantity": 40,
+            "machine": "constructor"
+        },
+        {
+            "name": "copper sheet",
+            "input_resources": [
+                {
+                    "name": "copper ingot",
+                    "quantity": 20
+                }
+            ],
+            "quantity": 10,
+            "machine": "constructor"
+        },
+        {
+            "name": "steel beam",
+            "input_resources": [
+                {
+                    "name": "steel ingot",
+                    "quantity": 60
+                }
+            ],
+            "quantity": 15,
+            "machine": "constructor"
+        },
+        {
+            "name": "steel pipe",
+            "input_resources": [
+                {
+                    "name": "steel ingot",
+                    "quantity": 30
+                }
+            ],
+            "quantity": 20,
+            "machine": "constructor"
+        },
+        {
+            "name": "wire",
+            "input_resources": [
+                {
+                    "name": "copper ingot",
+                    "quantity": 15
+                }
+            ],
+            "quantity": 30,
+            "machine": "constructor"
+        },
+        {
+            "name": "cable",
+            "input_resources": [
+                {
+                    "name": "wire",
+                    "quantity": 60
+                }
+            ],
+            "quantity": 30,
+            "machine": "constructor"
+        },
+        {
+            "name": "quickwire",
+            "input_resources": [
+                {
+                    "name": "caterium ore",
+                    "quantity": 12
+                }
+            ],
+            "quantity": 60,
+            "machine": "constructor"
+        },
+        {
+            "name": "concrete",
+            "input_resources": [
+                {
+                    "name": "limestone",
+                    "quantity": 45
+                }
+            ],
+            "quantity": 15,
+            "machine": "constructor"
+        },
+        {
+            "name": "quartz",
+            "input_resources": [
+                {
+                    "name": "raw quartz",
+                    "quantity": 37.5
+                }
+            ],
+            "quantity": 22.5,
+            "machine": "constructor"
+        },
+        {
+            "name": "silica",
+            "input_resources": [
+                {
+                    "name": "raw quartz",
+                    "quantity": 22.5
+                }
+            ],
+            "quantity": 37.5,
+            "machine": "constructor"
+        },
+        {
+            "name": "steel ingot",
+            "input_resources": [
+                {
+                    "name": "iron ore",
+                    "quantity": 45
+                },
+                {
+                    "name": "coal",
+                    "quantity": 45
+                }
+            ],
+            "quantity": 45,
+            "machine": "foundry"
+        },
+        {
+            "name": "reinforced iron plate",
+            "input_resources": [
+                {
+                    "name": "iron plate",
+                    "quantity": 30
+                },
+                {
+                    "name": "screw",
+                    "quantity": 60
+                }
+            ],
+            "quantity": 5,
+            "machine": "assembler"
+        },
+        {
+            "name": "modular frame",
+            "input_resources": [
+                {
+                    "name": "reinforced iron plate",
+                    "quantity": 3
+                },
+                {
+                    "name": "iron rod",
+                    "quantity": 12
+                }
+            ],
+            "quantity": 2,
+            "machine": "assembler"
+        },
+        {
+            "name": "encased industrial beam",
+            "input_resources": [
+                {
+                    "name": "steel beam",
+                    "quantity": 24
+                },
+                {
+                    "name": "concrete",
+                    "quantity": 30
+                }
+            ],
+            "quantity": 6,
+            "machine": "assembler"
+        },
+        {
+            "name": "rotor",
+            "input_resources": [
+                {
+                    "name": "iron rod",
+                    "quantity": 20
+                },
+                {
+                    "name": "screw",
+                    "quantity": 100
+                }
+            ],
+            "quantity": 4,
+            "machine": "assembler"
+        },
+        {
+            "name": "stator",
+            "input_resources": [
+                {
+                    "name": "steel pipe",
+                    "quantity": 15
+                },
+                {
+                    "name": "wire",
+                    "quantity": 40
+                }
+            ],
+            "quantity": 5,
+            "machine": "assembler"
+        },
+        {
+            "name": "motor",
+            "input_resources": [
+                {
+                    "name": "rotor",
+                    "quantity": 10
+                },
+                {
+                    "name": "stator",
+                    "quantity": 10
+                }
+            ],
+            "quantity": 5,
+            "machine": "assembler"
+        },
+        {
+            "name": "smart plating",
+            "input_resources": [
+                {
+                    "name": "reinforced iron plate",
+                    "quantity": 2
+                },
+                {
+                    "name": "rotor",
+                    "quantity": 2
+                }
+            ],
+            "quantity": 2,
+            "machine": "assembler"
+        },
+        {
+            "name": "versatile framework",
+            "input_resources": [
+                {
+                    "name": "modular frame",
+                    "quantity": 2.5
+                },
+                {
+                    "name": "steel beam",
+                    "quantity": 30
+                }
+            ],
+            "quantity": 5,
+            "machine": "assembler"
+        },
+        {
+            "name": "automated wiring",
+            "input_resources": [
+                {
+                    "name": "stator",
+                    "quantity": 2.5
+                },
+                {
+                    "name": "cable",
+                    "quantity": 50
+                }
+            ],
+            "quantity": 2.5,
+            "machine": "assembler"
+        },
+        {
+            "name": "fabric",
+            "input_resources": [
+                {
+                    "name": "mycelia",
+                    "quantity": 15
+                },
+                {
+                    "name": "biomass",
+                    "quantity": 15
+                }
+            ],
+            "quantity": 15,
+            "machine": "assembler"
+        },
+        {
+            "name": "black powder",
+            "input_resources": [
+                {
+                    "name": "coal",
+                    "quantity": 7.5
+                },
+                {
+                    "name": "sulfur",
+                    "quantity": 15
+                }
+            ],
+            "quantity": 7.5,
+            "machine": "assembler"
+        },
+        {
+            "name": "nobelisk",
+            "input_resources": [
+                {
+                    "name": "black powder",
+                    "quantity": 15
+                },
+                {
+                    "name": "steel pipe",
+                    "quantity": 30
+                }
+            ],
+            "quantity": 3,
+            "machine": "assembler"
+        },
+        {
+            "name": "ai limiter",
+            "input_resources": [
+                {
+                    "name": "copper sheet",
+                    "quantity": 25
+                },
+                {
+                    "name": "quickwire",
+                    "quantity": 100
+                }
+            ],
+            "quantity": 5,
+            "machine": "assembler"
+        },
+        {
+            "name": "circuit board",
+            "input_resources": [
+                {
+                    "name": "copper sheet",
+                    "quantity": 15
+                },
+                {
+                    "name": "plastic",
+                    "quantity": 30
+                }
+            ],
+            "quantity": 7.5,
+            "machine": "assembler"
+        },
+        {
+            "name": "plastic",
+            "input_resources": [
+                {
+                    "name": "crude oil",
+                    "quantity": 30
+                }
+            ],
+            "quantity": 20,
+            "machine": "refinery"
+        },
+        {
+            "name": "heavy oil residue",
+            "input_resources": [
+                {
+                    "name": "crude oil",
+                    "quantity": 30
+                }
+            ],
+            "quantity": 10,
+            "machine": "refinery"
+        },
+        {
+            "name": "plastic",
+            "input_resources": [
+                {
+                    "name": "polymer resin",
+                    "quantity": 60
+                },
+                {
+                    "name": "water",
+                    "quantity": 20
+                }
+            ],
+            "quantity": 20,
+            "machine": "refinery"
+        },
+        {
+            "name": "rubber",
+            "input_resources": [
+                {
+                    "name": "crude oil",
+                    "quantity": 30
+                }
+            ],
+            "quantity": 20,
+            "machine": "refinery"
+        },
+        {
+            "name": "heavy oil residue",
+            "input_resources": [
+                {
+                    "name": "crude oil",
+                    "quantity": 30
+                }
+            ],
+            "quantity": 20,
+            "machine": "refinery"
+        },
+        {
+            "name": "rubber",
+            "input_resources": [
+                {
+                    "name": "polymer resin",
+                    "quantity": 40
+                },
+                {
+                    "name": "water",
+                    "quantity": 40
+                }
+            ],
+            "quantity": 20,
+            "machine": "refinery"
+        },
+        {
+            "name": "petroleum coke",
+            "input_resources": [
+                {
+                    "name": "heavy oil residue",
+                    "quantity": 40
+                }
+            ],
+            "quantity": 120,
+            "machine": "refinery"
+        },
+        {
+            "name": "fuel",
+            "input_resources": [
+                {
+                    "name": "crude oil",
+                    "quantity": 60
+                }
+            ],
+            "quantity": 40,
+            "machine": "refinery"
+        }
+        ,
+        {
+            "name": "polymer resin",
+            "input_resources": [
+                {
+                    "name": "crude oil",
+                    "quantity": 60
+                }
+            ],
+            "quantity": 30,
+            "machine": "refinery"
+        },
+        {
+            "name": "fuel",
+            "input_resources": [
+                {
+                    "name": "heavy oil residue",
+                    "quantity": 60
+                }
+            ],
+            "quantity": 40,
+            "machine": "refinery"
+        }
+    ],
+    "machine_data": [
+        {
+            "name": "",
+            "output": 0,
+            "multiplier": 1
+        }
+    ]
+}
