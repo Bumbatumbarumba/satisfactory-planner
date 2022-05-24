@@ -1,7 +1,7 @@
-import { Recipe } from "../data/data.definition";
+import { Recipe } from "../../data/data.definition";
 
 export interface DataTableProps {
-    targetItemName: string,
+    targetItemIndex: number,
     recipeList: Array<Recipe>,
     multiplier: number
 }

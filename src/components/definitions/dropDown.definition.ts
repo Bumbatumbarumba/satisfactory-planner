@@ -1,4 +1,4 @@
-import { Recipe } from "../data/data.definition";
+import { Recipe } from "../../data/data.definition";
 
 export interface DropDownProps {
     handleChange: Function,

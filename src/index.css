@@ -21,10 +21,38 @@ code {
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 50%;
-  padding: 10px;
+  width: 75%;
+  /* padding: 10px; */
 }
 
 .title {
   font-family: satisfactoryFont;
+}
+
+.dataTreeNode {
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px;
+  border-style: solid;
+  border-radius: 1em;
+}
+
+.assembler {
+  border-color: gold;
+}
+
+.constructor {
+  border-color: red;
+}
+
+.miner {
+  border-color: blue;
+}
+
+.smelter {
+  border-color: purple;
+}
+
+.foundry {
+  border-color: black;
 }
