@@ -10,8 +10,8 @@ import { Feedback } from "./components/feedback";
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
   <>
-    <NavBar />
     <BrowserRouter>
+      <NavBar />
       <Routes>
         <Route path="/" element={<App />}></Route>
         <Route path="about" element={<About />}></Route>

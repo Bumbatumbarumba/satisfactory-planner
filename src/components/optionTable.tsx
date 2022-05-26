@@ -19,7 +19,7 @@ export const OptionTable = (props: OptionTableProps) => {
                 </p>
             </div>
             <div>
-                <button onClick={() => props.setMatchIO(true)}>Match inputs and outputs</button>
+                {/* <button onClick={() => props.setMatchIO(true)}>Match inputs and outputs</button> */}
             </div>
         </div>
     );

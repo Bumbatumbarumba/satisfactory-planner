@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { DataTreeNodeProps } from "./definitions/dataTreeNode.definition";
 
 export const DataTreeNode = (props: DataTreeNodeProps) => {
-    const [machineMultiplier, setMachineMultiplier] = useState(1);
+    // const [machineMultiplier, setMachineMultiplier] = useState(1);
     const matchIoMultiplier = props.requiredQuantity <= props.itemData.quantity
         ? 1
         : props.itemData.quantity / props.requiredQuantity;
@@ -18,14 +18,14 @@ export const DataTreeNode = (props: DataTreeNodeProps) => {
             : props.itemData.quantity * (props.isRoot ? props.multiplier : 1))
         : "";
 
-    const updateCounter = (decrement: boolean) => {
-        if (decrement && (machineMultiplier > 1)) {
-            setMachineMultiplier(machineMultiplier - 1)
-        }
-        else if (!decrement) {
-            setMachineMultiplier(machineMultiplier + 1)
-        }
-    }
+    // const updateCounter = (decrement: boolean) => {
+    //     if (decrement && (machineMultiplier > 1)) {
+    //         setMachineMultiplier(machineMultiplier - 1)
+    //     }
+    //     else if (!decrement) {
+    //         setMachineMultiplier(machineMultiplier + 1)
+    //     }
+    // }
 
     const upperCaseFirst = (word: string) => {
         return word.charAt(0).toUpperCase() + word.slice(1)

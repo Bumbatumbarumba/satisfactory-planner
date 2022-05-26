@@ -9,6 +9,7 @@ function App() {
   const [selectedItemIndex, setSelectedItemIndex] = useState(-1);
   const recipeList = data.recipe_data.sort((first: Recipe, second: Recipe) => first.name.localeCompare(second.name))
   const [desiredQuantityMultiplier, setDesiredQuantityMultiplier] = useState(1);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [matchIO, setMatchIO] = useState(false);
   const baseMultiplier = 1;
 
