@@ -4,9 +4,8 @@ import { Tree, TreeNode } from 'react-organizational-chart';
 import { Recipe } from '../data/data.definition';
 import { DataTreeNode } from './dataTreeNode';
 
-export const DataTree = ({ targetItemIndex, recipeList, multiplier }: DataTreeProps) => {
-    const startItem = targetItemIndex === -1 ? undefined : recipeList.at(targetItemIndex);
-
+export const DataTree = (props: DataTreeProps) => {
+    const startItem = props.targetItemIndex === -1 ? undefined : props.recipeList.at(props.targetItemIndex);
     const buildTree = (requiredQuantity: number, currentNode?: Recipe): JSX.Element => {
         if (!currentNode) {
             return (
@@ -15,9 +14,12 @@ export const DataTree = ({ targetItemIndex, recipeList, multiplier }: DataTreePr
         }
         return (
             <>
-                <TreeNode key={new Date().getTime()} label={<DataTreeNode itemData={currentNode} multiplier={multiplier} requiredQuantity={requiredQuantity} />}>
+                <TreeNode key={new Date().getTime()} label={<DataTreeNode
+                    itemData={currentNode}
+                    multiplier={props.multiplier}
+                    requiredQuantity={requiredQuantity} />}>
                     {currentNode.input_resources.map((inputItem) => {
-                        const nextItem = recipeList.find((item) => item.name === inputItem.name);
+                        const nextItem = props.recipeList.find((item) => item.name === inputItem.name);
                         return buildTree(inputItem.quantity, nextItem);
                     })}
                 </TreeNode>
@@ -26,15 +28,19 @@ export const DataTree = ({ targetItemIndex, recipeList, multiplier }: DataTreePr
     }
 
     return (
-        <>
+        <div className="main-view-item">
             {startItem &&
-                <Tree key={new Date().getTime()} label={<DataTreeNode itemData={startItem!} multiplier={multiplier} requiredQuantity={startItem?.quantity!} isRoot={true} />}>
+                <Tree lineColor={'white'} key={new Date().getTime()} label={<DataTreeNode
+                    itemData={startItem!}
+                    multiplier={props.multiplier}
+                    requiredQuantity={startItem?.quantity!}
+                    isRoot={true} />}>
                     {startItem.input_resources.map((item => {
-                        const nextItem = recipeList.find((current) => current.name === item.name);
+                        const nextItem = props.recipeList.find((current) => current.name === item.name);
                         return buildTree(item.quantity, nextItem);
                     }))}
                 </Tree>
             }
-        </>
+        </div>
     );
 }

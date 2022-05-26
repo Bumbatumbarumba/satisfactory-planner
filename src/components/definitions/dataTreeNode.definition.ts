@@ -6,3 +6,8 @@ export interface DataTreeNodeProps {
     multiplier: number,
     isRoot?: boolean
 }
+
+export interface RequiredResources {
+    name: string,
+    quantity: number
+}
