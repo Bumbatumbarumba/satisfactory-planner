@@ -15,11 +15,12 @@ export const About = () => {
                 <li>Complete the data</li>
                 <li>Add more functionality</li>
             </ul>
-            <p>If you are interested in contributing to these goals, the project can be found on
+            <p>
+                If you are interested in contributing to these goals, the project can be found on
                 github <a className="keep-style" href="https://github.com/Bumbatumbarumba/satisfactory-planner" target="_blank" rel="noreferrer">HERE</a> (opens in new tab).
             </p>
             <p>
-                By the way, check out Satisfactory <a className="keep-style" href="https://www.satisfactorygame.com/#about" target="_blank" rel="noreferrer">HERE</a>. It is a great game and it is being updated frequently!
+                By the way, check out Satisfactory <a className="keep-style" href="https://www.satisfactorygame.com/#about" target="_blank" rel="noreferrer">HERE</a> (opens in new tab). It is a great game and it is being updated frequently!
             </p>
         </div>
     );

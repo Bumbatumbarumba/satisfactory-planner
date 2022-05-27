@@ -6,7 +6,10 @@ export const Feedback = () => {
             <h3>Feedback</h3>
             <p>
                 If you have some feedback, suggestions, or other things you would like to share,
-                then feel free to leave a <a className="keep-style" href="https://github.com/Bumbatumbarumba/satisfactory-planner/discussions">discussion post</a> or an <a className="keep-style" href="https://github.com/Bumbatumbarumba/satisfactory-planner/issues">issue</a> on the repo
+                then feel free to
+                leave a <a className="keep-style" href="https://github.com/Bumbatumbarumba/satisfactory-planner/discussions">
+                    discussion post
+                </a> or an <a className="keep-style" href="https://github.com/Bumbatumbarumba/satisfactory-planner/issues">issue</a> on the repo.
             </p>
             {/* <img className="email-image" src={require("../data/email2.png")} alt="feedback email"></img> */}
             {/* <form id='contact-form'>
