@@ -38,8 +38,8 @@ export const RequiredResourcesTable = (props: RequiredResourcesTableProps) => {
         return aggregatedResult;
     }
     const results = aggregateDuplicates();
-    const tableBody = Object.keys(results).sort((a, b) => a.localeCompare(b)).map((resourceName) => {
-        return <tr>
+    const tableBody = Object.keys(results).sort((a, b) => a.localeCompare(b)).map((resourceName, index) => {
+        return <tr key={index}>
             <td>{resourceName}</td>
             <td>{results[resourceName] * props.multiplier}</td>
         </tr>

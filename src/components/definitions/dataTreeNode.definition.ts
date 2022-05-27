@@ -4,7 +4,9 @@ export interface DataTreeNodeProps {
     itemData: Recipe, 
     requiredQuantity: number,
     multiplier: number,
-    isRoot?: boolean
+    isRoot?: boolean,
+    baseQuantityMultipler?: number,
+    updateBaseQuantityModifier?: Function
 }
 
 export interface RequiredResources {

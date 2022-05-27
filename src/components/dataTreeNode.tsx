@@ -1,52 +1,41 @@
 import React from "react";
 import { DataTreeNodeProps } from "./definitions/dataTreeNode.definition";
 
-export const DataTreeNode = (props: DataTreeNodeProps) => {
-    // const [machineMultiplier, setMachineMultiplier] = useState(1);
-    const matchIoMultiplier = props.requiredQuantity <= props.itemData.quantity
+export const DataTreeNode = ({ itemData, multiplier, requiredQuantity, isRoot, baseQuantityMultipler, updateBaseQuantityModifier }: DataTreeNodeProps) => {
+    const matchIoMultiplier = requiredQuantity <= itemData.quantity
         ? 1
-        : props.itemData.quantity / props.requiredQuantity;
-    const outputText = (props.isRoot
-        ? "Desired"
-        : "Required") + " quantity: "
-        + ((matchIoMultiplier > 1
-            ? props.requiredQuantity * matchIoMultiplier
-            : props.requiredQuantity) * props.multiplier);
-    const inputText = props.itemData.quantity > 0
+        : itemData.quantity / requiredQuantity;
+    const outputText = "Required quantity: " + (matchIoMultiplier > 1
+        ? requiredQuantity * matchIoMultiplier
+        : requiredQuantity) * multiplier;
+    const inputText = itemData.quantity > 0
         ? "Base output quantity: " + (matchIoMultiplier > 1
-            ? props.itemData.quantity * matchIoMultiplier
-            : props.itemData.quantity * (props.isRoot ? props.multiplier : 1))
+            ? itemData.quantity * matchIoMultiplier
+            : itemData.quantity * (isRoot ? multiplier : 1) * (!isRoot ? baseQuantityMultipler! : 1))
         : "";
 
-    // const updateCounter = (decrement: boolean) => {
-    //     if (decrement && (machineMultiplier > 1)) {
-    //         setMachineMultiplier(machineMultiplier - 1)
-    //     }
-    //     else if (!decrement) {
-    //         setMachineMultiplier(machineMultiplier + 1)
-    //     }
-    // }
 
     const upperCaseFirst = (word: string) => {
         return word.charAt(0).toUpperCase() + word.slice(1)
     }
 
     return (
-        <div className={"data-tree-node " + props.itemData.machine}>
+        <div className={"data-tree-node " + itemData.machine}>
             <div className="tree-node-element">
                 <p>
-                    <strong>{upperCaseFirst(props.itemData.name) + " - " + upperCaseFirst(props.itemData.machine)}</strong>
-                    {!props.isRoot && <br />}
-                    {!props.isRoot && outputText}
+                    <strong>{upperCaseFirst(itemData.name) + " - " + upperCaseFirst(itemData.machine)}</strong>
+                    {!isRoot && <br />}
+                    {!isRoot && outputText}
                     <br />
                     {inputText}
                 </p>
             </div>
-            {/* <div className="tree-node-element tree-node-modifier">
-                <button onClick={() => updateCounter(false)}>+</button>
-                <p>{machineMultiplier}</p>
-                <button onClick={() => updateCounter(true)}>-</button>
-            </div> */}
+            {!(isRoot || itemData.machine === "miner") &&
+                <div className="tree-node-element tree-node-modifier">
+                    <button onClick={() => updateBaseQuantityModifier!(true)}>+</button>
+                    <p>{baseQuantityMultipler}</p>
+                    <button onClick={() => updateBaseQuantityModifier!(false)}>-</button>
+                </div>}
         </div>
     );
 }
