@@ -4,7 +4,7 @@ import { DataTreeNode } from "./dataTreeNode";
 import type { TreeItemProps } from "./definitions/TreeItem.definition";
 
 export const TreeItem = ({ currentItem, multiplier, isRoot, requiredQuantity, baseQuantityMultiplier, recipeList }: TreeItemProps) => {
-    const [baseMultiplier, setBaseMultiplier] = useState(1);
+    const [baseMultiplier, setBaseMultiplier] = useState(baseQuantityMultiplier);
     const handleUpdateBaseMultiplier = (increment: boolean) => {
         if (baseMultiplier > 1 && !increment) {
             setBaseMultiplier(baseMultiplier - 1);

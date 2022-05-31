@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DataTreeProps } from './definitions/dataTree.definition';
 import { Tree } from 'react-organizational-chart';
 import { DataTreeNode } from './dataTreeNode';
@@ -6,6 +6,15 @@ import { TreeItem } from './treeItem';
 
 export const DataTree = ({ targetItemIndex, multiplier, recipeList }: DataTreeProps) => {
     const startItem = targetItemIndex === -1 ? undefined : recipeList.at(targetItemIndex);
+    const [finalProductMultiplier, setFinalProductMultiplier] = useState(1);
+    const handleUpdateBaseMultiplier = (increment: boolean) => {
+        if (finalProductMultiplier > 1 && !increment) {
+            setFinalProductMultiplier(finalProductMultiplier - 1);
+        }
+        else if (increment) {
+            setFinalProductMultiplier(finalProductMultiplier + 1);
+        }
+    }
 
     return (
         <div className="main-view-item">
@@ -15,7 +24,8 @@ export const DataTree = ({ targetItemIndex, multiplier, recipeList }: DataTreePr
                         itemData={startItem!}
                         multiplier={multiplier}
                         requiredQuantity={startItem?.quantity!}
-                        baseQuantityMultipler={multiplier}
+                        baseQuantityMultipler={finalProductMultiplier}
+                        updateBaseQuantityModifier={handleUpdateBaseMultiplier}
                         isRoot={true} />
                 }>
                     {startItem.input_resources.map((childItem, index) => {
@@ -24,7 +34,7 @@ export const DataTree = ({ targetItemIndex, multiplier, recipeList }: DataTreePr
                             key={index}
                             currentItem={nextItem}
                             multiplier={multiplier}
-                            baseQuantityMultiplier={1}
+                            baseQuantityMultiplier={finalProductMultiplier}
                             isRoot={false}
                             requiredQuantity={childItem.quantity}
                             recipeList={recipeList} />

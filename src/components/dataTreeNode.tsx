@@ -9,9 +9,9 @@ export const DataTreeNode = ({ itemData, multiplier, requiredQuantity, isRoot, b
         ? requiredQuantity * matchIoMultiplier
         : requiredQuantity) * multiplier;
     const inputText = itemData.quantity > 0
-        ? "Base output quantity: " + (matchIoMultiplier > 1
+        ? "Output quantity: " + (matchIoMultiplier > 1
             ? itemData.quantity * matchIoMultiplier
-            : itemData.quantity * (isRoot ? multiplier : 1) * (!isRoot ? baseQuantityMultipler! : 1))
+            : itemData.quantity * baseQuantityMultipler!)
         : "";
 
 
@@ -30,7 +30,7 @@ export const DataTreeNode = ({ itemData, multiplier, requiredQuantity, isRoot, b
                     {inputText}
                 </p>
             </div>
-            {!(isRoot || itemData.machine === "miner") &&
+            {!(itemData.machine === "miner") &&
                 <div className="tree-node-element tree-node-modifier">
                     <button onClick={() => updateBaseQuantityModifier!(true)}>+</button>
                     <p>{baseQuantityMultipler}</p>
