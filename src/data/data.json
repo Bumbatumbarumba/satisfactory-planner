@@ -556,6 +556,136 @@
             ],
             "quantity": 40,
             "machine": "refinery"
+        },
+        {
+            "name": "heavy modular frame",
+            "input_resources": [
+                {
+                    "name": "modular frame",
+                    "quantity": 10
+                },
+                {
+                    "name": "steel pipe",
+                    "quantity": 30
+                },
+                {
+                    "name": "encased industrial beam",
+                    "quantity": 10
+                },
+                {
+                    "name": "screw",
+                    "quantity": 200
+                }
+            ],
+            "quantity": 2,
+            "machine": "manufacturer"
+        },
+        {
+            "name": "computer",
+            "input_resources": [
+                {
+                    "name": "circuit board",
+                    "quantity": 25
+                },
+                {
+                    "name": "cable",
+                    "quantity": 22.5
+                },
+                {
+                    "name": "plastic",
+                    "quantity": 45
+                },
+                {
+                    "name": "screw",
+                    "quantity": 130
+                }
+            ],
+            "quantity": 2.5,
+            "machine": "manufacturer"
+        },
+        {
+            "name": "crystal oscillator",
+            "input_resources": [
+                {
+                    "name": "quartz crystal",
+                    "quantity": 18
+                },
+                {
+                    "name": "cable",
+                    "quantity": 14
+                },
+                {
+                    "name": "reinforced iron plate",
+                    "quantity": 2.5
+                }
+            ],
+            "quantity": 1,
+            "machine": "manufacturer"
+        },
+        {
+            "name": "modular engine",
+            "input_resources": [
+                {
+                    "name": "motor",
+                    "quantity": 2
+                },
+                {
+                    "name": "rubber",
+                    "quantity": 15
+                },
+                {
+                    "name": "smart plating",
+                    "quantity": 2
+                }
+            ],
+            "quantity": 1,
+            "machine": "manufacturer"
+        },
+        {
+            "name": "adaptive control unit",
+            "input_resources": [
+                {
+                    "name": "automated wiring",
+                    "quantity": 7.5
+                },
+                {
+                    "name": "circuit board",
+                    "quantity": 5
+                },
+                {
+                    "name": "heavy modular frame",
+                    "quantity": 1
+                },
+                {
+                    "name": "computer",
+                    "quantity": 1
+                }
+            ],
+            "quantity": 1,
+            "machine": "manufacturer"
+        },
+        {
+            "name": "beacon",
+            "input_resources": [
+                {
+                    "name": "iron plate",
+                    "quantity": 22.5
+                },
+                {
+                    "name": "iron rod",
+                    "quantity": 7.5
+                },
+                {
+                    "name": "wire",
+                    "quantity": 112.5
+                },
+                {
+                    "name": "cable",
+                    "quantity": 15
+                }
+            ],
+            "quantity": 7.5,
+            "machine": "manufacturer"
         }
     ],
     "machine_data": [

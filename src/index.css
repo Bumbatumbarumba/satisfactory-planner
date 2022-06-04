@@ -82,6 +82,10 @@ code {
   border-color: black;
 }
 
+.manufacturer {
+  border-color: green;
+}
+
 
 /* NAV BAR */
 .title {

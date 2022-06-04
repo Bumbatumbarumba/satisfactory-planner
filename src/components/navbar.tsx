@@ -5,7 +5,7 @@ export const NavBar = () => {
     const [activeItem, setActiveItem] = useState("home");
     return (
         <>
-            <h2 className="title">Satisfactory Item Production Planner</h2>
+            <h2 className="title">Satisfactory Helper</h2>
             <div>
                 <ul className="nav-bar">
                     <li className="nav-bar-item"><Link to="/" className={activeItem === "home" ? "active" : ""} onClick={() => setActiveItem("home")}>Home</Link></li>
