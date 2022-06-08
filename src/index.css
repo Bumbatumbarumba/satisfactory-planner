@@ -62,27 +62,27 @@ code {
   justify-content: center;
 }
 
-.assembler {
+.assembler-true{
   border-color: gold;
 }
 
-.constructor {
+.constructor-true{
   border-color: red;
 }
 
-.miner {
+.miner-true{
   border-color: blue;
 }
 
-.smelter {
+.smelter-true{
   border-color: purple;
 }
 
-.foundry {
+.foundry-true{
   border-color: black;
 }
 
-.manufacturer {
+.manufacturer-true{
   border-color: green;
 }
 

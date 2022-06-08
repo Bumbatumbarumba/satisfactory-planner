@@ -7,10 +7,12 @@ import { NavBar } from "./components/navbar";
 import { About } from "./components/about";
 import { Feedback } from "./components/feedback";
 import { Updates } from "./components/updates";
+import { store } from './app/store'
+import { Provider } from 'react-redux'
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
-  <>
+  <Provider store={store}>
     <BrowserRouter>
       <NavBar />
       <Routes>
@@ -20,5 +22,5 @@ root.render(
         <Route path="feedback" element={<Feedback />}></Route>
       </Routes>
     </BrowserRouter>
-  </>
+  </Provider>
 );
