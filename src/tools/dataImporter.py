@@ -4,7 +4,7 @@ import re
 
 def parseJank(source):
     res = []
-    parsed = re.sub("\(*|ItemClass\=|Amount\=|\)*", "", source)
+    parsed = re.sub("\(*|ItemClass\=|Amount\=|\)*", "", source).replace("")
     splitParsed = parsed.split(",")
     for i in range(0, len(splitParsed), 2):
         res.append(
