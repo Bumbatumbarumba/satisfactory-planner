@@ -1,7 +1,10 @@
 import React from "react";
 import { DataTreeNodeProps } from "./definitions/dataTreeNode.definition";
+import { RootState } from '../app/store';
+import { useSelector } from 'react-redux';
 
 export const DataTreeNode = (props: DataTreeNodeProps) => {
+    const enabled = useSelector((state: RootState) => state.colourSwitch.enabled);
     // const [machineMultiplier, setMachineMultiplier] = useState(1);
     const matchIoMultiplier = props.requiredQuantity <= props.itemData.quantity
         ? 1
@@ -28,11 +31,11 @@ export const DataTreeNode = (props: DataTreeNodeProps) => {
     // }
 
     const upperCaseFirst = (word: string) => {
-        return word.charAt(0).toUpperCase() + word.slice(1)
-    }
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    };
 
     return (
-        <div className={"data-tree-node " + props.itemData.machine}>
+        <div className={"data-tree-node " + props.itemData.machine + "-" + enabled}>
             <div className="tree-node-element">
                 <p>
                     <strong>{upperCaseFirst(props.itemData.name) + " - " + upperCaseFirst(props.itemData.machine)}</strong>
@@ -49,4 +52,4 @@ export const DataTreeNode = (props: DataTreeNodeProps) => {
             </div> */}
         </div>
     );
-}
+};

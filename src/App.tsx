@@ -4,10 +4,11 @@ import type { Recipe } from "./data/data.definition";
 import { DataTree } from "./components/dataTree";
 import { OptionTable } from "./components/optionTable";
 import { RequiredResourcesTable } from "./components/requiredResourcesTable";
+import { ToggleSwitch } from "./components/toggleSwitch";
 
 function App() {
   const [selectedItemIndex, setSelectedItemIndex] = useState(-1);
-  const recipeList = data.recipe_data.sort((first: Recipe, second: Recipe) => first.name.localeCompare(second.name))
+  const recipeList = data.recipe_data.sort((first: Recipe, second: Recipe) => first.name.localeCompare(second.name));
   const [desiredQuantityMultiplier, setDesiredQuantityMultiplier] = useState(1);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [matchIO, setMatchIO] = useState(false);
@@ -25,6 +26,7 @@ function App() {
           baseMultiplier={baseMultiplier}
           setDesiredQuantityMultiplier={setDesiredQuantityMultiplier}
           setMatchIO={setMatchIO} />
+        <ToggleSwitch />
         <RequiredResourcesTable selectedItemIndex={selectedItemIndex} recipeList={recipeList} multiplier={desiredQuantityMultiplier} />
         <DataTree targetItemIndex={selectedItemIndex} recipeList={recipeList} multiplier={desiredQuantityMultiplier} />
       </div>
