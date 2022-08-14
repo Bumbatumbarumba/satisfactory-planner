@@ -1,3 +1,6 @@
+# Live Site
+The site has been deployed with Heroku and can be seen in action [here](https://satisfactory-helper.herokuapp.com/)!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
